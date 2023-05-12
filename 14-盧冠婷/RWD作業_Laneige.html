@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pj Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/rwd.css">
+    <link rel="stylesheet" href="./style/3d-rotate.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 960px)" href="./style/rwd960.css" /> -->
+    <style>
+        @media screen and (max-width:960px) {
+            .carousel-caption {
+                width: 100%;
+            }
+
+            .BN3 .card {
+                width: 400px;
+            }
+
+            .BN2 .card {
+                transform: translateX(-170px);
+            }
+
+            .BN4 {
+                visibility: hidden;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header_pad">
+        <div class="header_logo">
+            <img src="./lane-img/logo/laneige-logo.svg" alt="laneige">
+        </div>
+        <div class="gnb d-none d-lg-block">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">BRAND</a></li>
+                    <li><a href="#">LBLL</a></li>
+                    <li><a href="#">MEETS ART</a></li>
+                    <li><a href="#">BEST & NEW</a></li>
+                    <li><a href="#">SKINCARE</a></li>
+                    <li><a href="#">MAKEUP</a></li>
+                    <li><a href="#">HOMME</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_utility">
+            <svg class="search" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                viewBox="0 0 32 32"> <a href="#"></a>
+                <title>search</title>
+                <path
+                    d="M20 0.005c-6.627 0-12 5.373-12 12 0 2.026 0.507 3.933 1.395 5.608l-8.344 8.342 0.007 0.006c-0.652 0.641-1.058 1.529-1.058 2.516 0 1.949 1.58 3.529 3.529 3.529 0.985 0 1.874-0.406 2.515-1.059l-0.002-0.002 8.341-8.34c1.676 0.891 3.586 1.4 5.617 1.4 6.627 0 12-5.373 12-12s-5.373-12-12-12zM4.795 29.697c-0.322 0.334-0.768 0.543-1.266 0.543-0.975 0-1.765-0.789-1.765-1.764 0-0.498 0.21-0.943 0.543-1.266l-0.009-0.008 8.066-8.066c0.705 0.951 1.545 1.791 2.494 2.498l-8.063 8.063zM20 22.006c-5.522 0-10-4.479-10-10s4.478-10 10-10c5.521 0 10 4.478 10 10s-4.479 10-10 10zM20 5.005c0.275 0 0.5 0.224 0.5 0.5s-0.225 0.5-0.5 0.5c-3.314 0-6 2.687-6 6 0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-3.866 3.133-7 7-7z">
+                </path>
+            </svg>
+
+            <svg class="lang" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                viewBox="0 0 24 24"><a href="#"></a>
+                <title>language</title>
+                <path
+                    d="M16.359 14.016h3.375q0.281-1.313 0.281-2.016t-0.281-2.016h-3.375q0.141 0.984 0.141 2.016t-0.141 2.016zM14.578 19.547q1.172-0.375 2.438-1.43t1.922-2.133h-2.953q-0.469 1.875-1.406 3.563zM14.344 14.016q0.141-0.984 0.141-2.016t-0.141-2.016h-4.688q-0.141 0.984-0.141 2.016t0.141 2.016h4.688zM12 19.969q1.313-1.922 1.922-3.984h-3.844q0.609 2.063 1.922 3.984zM8.016 8.016q0.563-2.016 1.406-3.563-1.172 0.375-2.461 1.43t-1.898 2.133h2.953zM5.063 15.984q0.609 1.078 1.898 2.133t2.461 1.43q-0.938-1.688-1.406-3.563h-2.953zM4.266 14.016h3.375q-0.141-0.984-0.141-2.016t0.141-2.016h-3.375q-0.281 1.313-0.281 2.016t0.281 2.016zM12 4.031q-1.313 1.922-1.922 3.984h3.844q-0.609-2.063-1.922-3.984zM18.938 8.016q-0.656-1.078-1.922-2.133t-2.438-1.43q0.844 1.547 1.406 3.563h2.953zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z">
+                </path>
+            </svg>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+
+        <!-- SECTION-BN1 -->
+        <section>
+            <div class="BN1">
+                <div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./lane-img/BN1/20220428_final_BESPOKE-NEO_main_KV_pc (1).jpg"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption text-black">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    2022 HOLIDAY DAZZLE
+                                </h4>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Fill up this year’s holiday with love, laughter,
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    and a bit of
+                                    <span class="fw-bold fs-4">DAZZLE!
+                                    </span>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/220523_final_NEO-NOVO_main_kv_pc.jpg" class="d-block w-100"
+                                alt="...">
+                            <div class="carousel-caption text-black" style="padding-bottom: 180px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    LANEIGE X
+                                    ARTIST NOVO <br>
+                                    NEO CUSHION_MATTE
+                                </h4>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Experience a pleasant change in life
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    through art projects presented by
+                                    <span class="fw-bold fs-4">LANEIGE!
+                                    </span>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/20221014_final_KR_BTS_Main_KV_pc.jpg" class="d-block w-100"
+                                alt="...">
+                            <div class="carousel-caption text-black" style="padding-bottom:160px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    BTS | AMOREPACIFIC <br>
+                                    LIP &amp; POP EDITION
+                                </h4>
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    LOVE YOUR LIPS. FEEL LIKE POP!</p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    End your day with the POPtastic overnight
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    lip sleeping mask inspired by
+                                    <span class="fw-bold fs-4">songs of BTS.
+                                    </span>
+                                </p>
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/3.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption text-black" style="padding-bottom:200px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    LANEIGE X MAISON KITSUNE<br>
+                                    NEO CUSHION
+                                </h4>
+                                <p class="m-0 py-1"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.1rem;">
+                                    HEY – NEO! WHY SO GRAY?</p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Limited Edition, a must-have this fall!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/last.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption text-black" style="padding-bottom:190px;">
+                                <!-- <h1 class="BN1_T0">NEW</h1> -->
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    WATER BANK BLUE HYALURONIC<br>
+                                    CLEANSING GEL ‧ OIL
+                                </h4>
+                                <!-- <p class="m-0 py-1"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.1rem;">
+                                    HEY – NEO! WHY SO GRAY?</p> -->
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+
+                                    <span class="fw-bold fs-4">LANEIGE’s
+                                    </span>
+                                    complete skin cleansing routine recommendation
+                                </p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    for clean and dewy skin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div id="carousel960" class="carousel slide d-lg-none" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./lane-img/BN1/color720.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black W-350"
+                                style="padding-bottom: 220px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    2022 HOLIDAY DAZZLE
+                                </h4>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Fill up this year’s holiday with love, laughter,
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    and a bit of
+                                    <span class="fw-bold fs-4">DAZZLE!
+                                    </span>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/art720.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black W-350"
+                                style="padding-bottom: 180px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    LANEIGE X
+                                    ARTIST NOVO <br>
+                                    NEO CUSHION_MATTE
+                                </h4>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Experience a pleasant change in life
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    through art projects presented by
+                                    <span class="fw-bold fs-4">LANEIGE!
+                                    </span>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/purple720.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black W-350"
+                                style="padding-bottom:160px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    BTS | AMOREPACIFIC <br>
+                                    LIP &amp; POP EDITION
+                                </h4>
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    LOVE YOUR LIPS. FEEL LIKE POP!</p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    End your day with the POPtastic overnight
+                                <p
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;line-height: 1.3rem;">
+                                    lip sleeping mask inspired by
+                                    <span class="fw-bold fs-4">songs of BTS.
+                                    </span>
+                                </p>
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/fox720.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black W-350"
+                                style="padding-bottom:200px;">
+                                <h1 class="BN1_flag">NEW</h1>
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    LANEIGE X MAISON KITSUNE<br>
+                                    NEO CUSHION
+                                </h4>
+                                <p class="m-0 py-1"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.1rem;">
+                                    HEY – NEO! WHY SO GRAY?</p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    Limited Edition, a must-have this fall!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./lane-img/BN1/blue720.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black W-350"
+                                style="padding-bottom:190px;">
+                                <!-- <h1 class="BN1_T0">NEW</h1> -->
+                                <h4 class="fw-bold" style="font-size: 50px;text-align: start;padding: 18px 0px;">
+                                    WATER BANK BLUE HYALURONIC<br>
+                                    CLEANSING GEL ‧ OIL
+                                </h4>
+                                <!-- <p class="m-0 py-1"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 25px;letter-spacing: -0.05rem;line-height: 1.1rem;">
+                                    HEY – NEO! WHY SO GRAY?</p> -->
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+
+                                    <span class="fw-bold fs-4">LANEIGE’s
+                                    </span>
+                                    complete skin cleansing routine recommendation
+                                </p>
+                                <p class="m-0"
+                                    style="font-family: 'Consolas', sans-serif;text-align: start;font-size: 20px;letter-spacing: -0.05rem;">
+                                    for clean and dewy skin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SECTION-BN2 -->
+        <section>
+
+            <div class="BN2">
+                <div class="water">
+                    <h2>BEST SELLER</h2>
+                    <video class="bg_video" data-assets="video" preload autoplay muted loop playsinline
+                        poster="/int/en/assets/image/index/bestseller-bg.jpg">
+                        <source src="./lane-img/water.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+                <!-- 桌機 -->
+                <div class="container d-none d-lg-block" style="background-color:transparent; min-height: 1000px;">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row1">
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/p-1.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>CREAM SKIN REFINER</h6>
+                                        <p>This toner has a light form that is as
+                                            moist as cream. It is a
+                                            product of
+                                            my life that takes care of moisture,right from the
+                                            beginning!
+                                        </p>
+                                        <p> @rabb******** </p>
+                                    </div>
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/P-2.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>Water Sleeping Mask_EX</h6>
+                                        <p>I have been using this product for several years
+                                            to
+                                            brighten my crumbly skin with the moist form.
+                                        </p>
+                                        <p> @heat*********</p>
+                                    </div>
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/p-3.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>SKIN VEIL BASE EX</h6>
+                                        <p>It spreads well. I love how this product
+                                            brightens my
+                                            reddish skin tone.
+                                        </p>
+                                        <p> @dpql*****</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row1">
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/p-4.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>WATER BANK BLUE HYALURONIC CREAM</h6>
+                                        <p>It feels fully moisturized <br>to the inside
+                                            rather
+                                            than having oiliness remaining on the outside.
+                                        </p>
+                                        <p> @dolma**** </p>
+
+                                    </div>
+
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/p-5.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>Lip Sleeping Mask</h6>
+                                        <p>I am greatly satisfied with<br> Lip Sleeping
+                                            Mask. It
+                                            prevents horny skin from standing out after applying a matt lip product.
+                                        </p>
+                                        <p> @cosm********* </p>
+
+                                    </div>
+                                    <div class="card">
+                                        <img class="img-wrap" src="./lane-img/Product/p-6.png" class="d-block w-100"
+                                            alt="...">
+                                        <h6>NEO CUSHION MATTE</h6>
+                                        <p>
+                                        <p class="item__desc">The finishing was the best out of all the cushions I've
+                                            used
+                                            so far.
+                                            It gorgeously expresses the skin with a matte and soft/dry finish.
+
+                                        </p>
+                                        <p> @euns******** </p>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev" style="filter: invert(100%);">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next" style="filter: invert(100%);">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- 手機平板-->
+
+                <div class="container d-lg-none" style="background-color:transparent; min-height: 1000px;">
+                    <div id="carouselExampleControls d-flex align-content-center" class="carousel slide"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner d-flex justify-content-center">
+                            <div class="carousel-item active">
+
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/p-1.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>CREAM SKIN REFINER</h6>
+                                    <p>This toner has a light form that is as
+                                        moist as cream. It is a
+                                        product of
+                                        my life that takes care of moisture,right from the
+                                        beginning!
+                                    </p>
+                                    <p> @rabb******** </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/P-2.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>Water Sleeping Mask_EX</h6>
+                                    <p>I have been using this product for several years
+                                        to
+                                        brighten my crumbly skin with the moist form.
+                                    </p>
+                                    <p> @heat*********</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/p-3.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>SKIN VEIL BASE EX</h6>
+                                    <p>It spreads well. I love how this product
+                                        brightens my
+                                        reddish skin tone.
+                                    </p>
+                                    <p> @dpql*****</p>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/p-4.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>WATER BANK BLUE HYALURONIC CREAM</h6>
+                                    <p>It feels fully moisturized <br>to the inside
+                                        rather
+                                        than having oiliness remaining on the outside.
+                                    </p>
+                                    <p> @dolma**** </p>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/p-5.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>Lip Sleeping Mask</h6>
+                                    <p>I am greatly satisfied with<br> Lip Sleeping
+                                        Mask. It
+                                        prevents horny skin from standing out after applying a matt lip product.
+                                    </p>
+                                    <p> @cosm********* </p>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img class="img-wrap" src="./lane-img/Product/p-6.png" class="d-block w-100"
+                                        alt="...">
+                                    <h6>NEO CUSHION MATTE</h6>
+                                    <p>
+                                    <p class="item__desc">The finishing was the best out of all the cushions I've
+                                        used
+                                        so far.
+                                        It gorgeously expresses the skin with a matte and soft/dry finish.
+
+                                    </p>
+                                    <p> @euns******** </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+        <!-- SECTION-BN3 -->
+        <section>
+            <div class="BN3">
+                <div class="container ">
+                    <div class="row">
+                        <div class="tittle">BRANDY STORY</div>
+                        <div class="card">
+                            <img class=" img-wrap" src="./lane-img/BN3/20211201_feel_the_glow.jpg" class="d-block w-100"
+                                alt="...">
+                            <h6>FEEL the GLOW</h6>
+                            <p>LANEIGE not only gives Radiance on my skin,
+                                but also Confidence in my life.
+                            </p>
+                        </div>
+
+                        <div class="tittle tittle2">LANEIGE MEETS ARTS</div>
+                        <div class="card card2">
+                            <img class=" img-wrap"
+                                src="./lane-img/BN3/20220624_final_ARTIST-NOVO-COLLECTION_main_sub-banner_1.jpg"
+                                class="d-block w-100" alt="...">
+                            <h6>Artist NOVO</h6>
+                            <p>ART PROJECT FOR 2022
+                            </p>
+                        </div>
+                        <div class="tittle tittle3">HUG UNIVERSAL GOODNESS</div>
+                        <div class="card card3">
+                            <img class=" img-wrap" src="./lane-img/BN3/20220624_final_HUG-CAMPAIGN_main_sub-banner.jpg"
+                                class="d-block w-100" alt="...">
+                            <h6>HUG UNIVERSAL</h6>
+                            <p>Laneige's start of change that embraces all the beauty of the
+                                world
+                                Our small movements can make a bigger change.
+                                .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+
+        <!-- SECTION-BN4 -->
+        <section4>
+            <div class="BN4">
+                <div class="cloud"> <img src="./lane-img/slogan_bg/pexels-henry-&-co-2344227.jpg" alt=""></div>
+                <div class="camera">
+                    <div class="cube">
+                        <!-- 6面 -->
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                        <div class="box back"></div>
+                        <div class="box front"></div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer>
+
+                <div class="bottom">
+                    <div class="footer">
+                        <div class="wrap1">
+                            <nav>
+                                <ul class="info">
+                                    <li class="d-none d-lg-block"><a href="#" class=""></a>About Us </li>
+                                    <li class="d-none d-lg-block"><a href="#" class=""></a>Terms&Conditions </li>
+                                    <li class=""><a href="#" class=""></a>Sitemap</li>
+                                </ul>
+                            </nav>
+
+                            <div class="icon">
+                                <div class="icon_wrap">
+                                    <div><img src="./lane-img/icon/sns_instagram_renew.png" alt=""></div>
+                                    <div> <img src="./lane-img/icon/sns_youtube_renew.png" alt=""></div>
+                                    <div> <img src="./lane-img/icon/sns_facebook_renew.png" alt=""></div>
+                                    <div> <img src="./lane-img/icon/sns_tiktok_renew.png" alt=""></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="wrap2">
+                        <div class="T1">
+                            <p class="d-none d-lg-block">Laneige vous invite à trier vos emballages. Pour en savoir plus
+                                sur
+                                les consignes de tri,
+                                rendez vous sur
+                                <span> <a class="text-muted .fs-6" href="#"> http://www.consignesdetri.fr.</a>
+                                </span>
+                            </p>
+                            <p> <span class="fw-bold"> © AMOREPACIFIC. </span>All RIGHTS RESERVED.</p>
+                        </div>
+                        <div>
+                            <select name="lang" class="d-none d-lg-block">
+                                <option value="INT">INTERNATIONAL/ENGLISH</option>
+                                <option value="CH">中文</option>
+                                <option value="KR">한국/한국어</option>
+                                <option value="IN">INDONESIA/BAHASA INDONESIA</option>
+                                <option value="MA">MALAYSIA/ENGLISH</option>
+                                <option value="TH">ประเทศไทย/ไทย</option>
+                                <option value="US">UNITED STATES/ENGLISH</option>
+                                <option value="VE">VIỆT NAM/TIẾNG VIỆT</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

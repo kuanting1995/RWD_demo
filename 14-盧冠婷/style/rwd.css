@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Consolas', sans-serif; */
+}
+
+
+/* header */
+.header_pad {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo img {
+    display: flex;
+    width: 180px;
+    margin-left: 25px;
+    margin-right: 30px;
+    /* border: 1px solid rgb(255, 0, 255); */
+    padding: 0px 15px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu {
+    list-style-type: none;
+    width: 100%;
+    min-height: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 0px 100px; */
+    /* border: 2px solid red; */
+    padding-top: 15px;
+}
+
+.menu li a {
+    font-size: 21.5px;
+    color: black;
+    line-height: 2.5rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Consolas', sans-serif;
+    /* border: 1px solid green; */
+    margin: 0px 15px;
+}
+
+.header_utility {
+    width: 180px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    margin-left: 80px;
+}
+
+.search {
+    width: 25px;
+    /* border: 1px solid red; */
+    margin-right: 40px;
+    transform: rotateY(180deg);
+}
+
+.lang {
+    width: 25px;
+    /* border: 1px solid red; */
+    margin-right: 18px;
+}
+
+.search path {
+    fill: #b0c4de;
+}
+
+.lang path {
+    fill: #b0c4de
+}
+
+@font-face {
+    font-family: Consolas;
+    src: url(./font/CONSOLAB.TTF);
+
+}
+
+
+/* MAIN */
+.BN1_flag {
+    width: 42px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(35, 108, 196, 0.866);
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 15%;
+    /* border: 2px solid black; */
+}
+
+
+.W-700 {
+    width: 700px;
+}
+
+.BN2 {
+    width: 100%;
+    /* min-height: 800px; */
+}
+
+.water {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.water h2 {
+    position: absolute;
+    top: 20px;
+}
+
+.bg_video {
+    width: 100%;
+
+}
+
+.BN2 .container {
+    transform: translateY(-38%);
+    /* border: 2px solid blue; */
+
+}
+
+.BN2 .card {
+    width: 33.3%;
+    aspect-ratio: 1/2;
+    margin: 0px 40px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.BN2 p,
+.BN2 h6 {
+    text-align: center;
+}
+
+.BN2 .row1 h6 {
+    font-size: 20px;
+    color: rgba(35, 108, 196, 0.866);
+}
+
+.row1 {
+    display: flex;
+    padding: 100px;
+    /* border: 5px solid red; */
+}
+
+.img-wrap {
+    /* background-color: gainsboro; */
+    aspect-ratio: 1/1.8;
+    width: 100%;
+    object-fit: cover;
+    padding: 40px 0px;
+}
+
+.img {
+    width: 100%;
+}
+
+.BN2 h2 {
+    font-size: 50px;
+    font-family: 'Consolas', sans-serif;
+    letter-spacing: 1.5px;
+    /* border: 2px solid red; */
+    width: 100%;
+    text-align: center;
+    transform: translateY(100%);
+
+}
+
+.BN3 {
+    height: 450px;
+    transform: translateY(-90%);
+    /* border: 3px solid black; */
+}
+
+.BN3 .container {
+    width: 100%;
+}
+
+.BN3 .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.BN3 .card {
+    width: 25%;
+    aspect-ratio: 1/2;
+    padding: 10px;
+    background-color: transparent;
+    border: transparent;
+    text-align: start;
+}
+
+.BN3 .img-wrap {
+    /* background-color: gainsboro; */
+    width: 100%;
+    object-fit: cover;
+    padding-top: 0px
+}
+
+.BN3 h6 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+/* 標題文字旋轉 */
+
+.BN3 .tittle {
+    display: flex;
+    width: 30px;
+    margin-top: 13px;
+    margin-right: 13px;
+    height: 270px;
+    transform: rotateZ(180deg);
+    /* border: 2px solid black; */
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    color: rgba(35, 108, 196, 0.866);
+    justify-content: end;
+
+}
+
+.BN4 {
+    background:
+        url(./img_slogan/pexels-francesco-ungaro-281260.jpg);
+    min-height: 800px;
+    background-position-y: 70%;
+    position: relative;
+}
+
+.cloud {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+
+}
+
+.BN4 img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: 0% 87%;
+    opacity: .2;
+    /* border: 10px solid hsla(0, 0%, 100%, .5);
+    border-radius: 40px; */
+
+}
+
+.info {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-right: 700px;
+}
+
+.info li {
+    height: 35px;
+    padding: 20px 20px;
+    /* border: 2px solid red; */
+    font-size: 13px;
+    padding-left: 0px;
+}
+
+/* FOOTER */
+.bottom {
+    width: 100%;
+    height: 200px;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid rgba(128, 128, 128, 0.344);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.344);
+}
+
+
+.wrap1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 140px;
+    align-items: flex-start;
+}
+
+.wrap1 .info {
+    display: flex;
+    justify-content: start;
+    padding-left: 0px;
+    /* border: 2px solid red; */
+}
+
+.icon {
+    justify-content: end;
+}
+
+.icon_wrap {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid rgb(52, 207, 104); */
+}
+
+.icon_wrap div {
+    padding: 10px 10px;
+    /* border: 3px solid purple; */
+}
+
+.icon img {
+    height: 25px;
+    width: 25px;
+
+}
+
+
+.wrap2 {
+    display: flex;
+    margin: 0px 140px;
+    justify-content: space-between;
+}
+
+.wrap2 .T1 {
+    padding-right: 200px;
+}

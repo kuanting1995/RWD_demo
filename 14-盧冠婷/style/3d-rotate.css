@@ -1,0 +1,138 @@
+/* body {
+    margin: 20px;
+} */
+
+.camera {
+    width: 400px;
+    height: 400px;
+    perspective: 800px;
+    position: absolute;
+    left: 42%;
+    bottom: 25%;
+    object-position: center;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transition: 5s;
+}
+
+.box {
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+
+.left {
+    background: url(./img_slogan/slogan1.png) no-repeat;
+    transform: rotateY(0deg);
+    animation: rotateL 8s linear infinite;
+    animation-direction: alternate;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.right {
+    background: url(./img_slogan/slogan2.png) no-repeat;
+    object-fit: contain;
+    object-position: center;
+    transform: rotateY(0deg);
+    animation: rotateR 8s linear infinite;
+    animation-delay: 0;
+    animation-direction: alternate;
+
+}
+
+
+.back {
+    background: url(./img_slogan/glow06-logo.png) no-repeat;
+    object-fit: fill;
+    object-position: center;
+    transform: rotateY(0deg);
+    animation: rotateB 8s linear infinite;
+    animation-delay: 0;
+    animation-direction: alternate;
+
+
+}
+
+.front {
+    background: url(./img_slogan/slogan1.png) no-repeat;
+    object-fit: contain;
+    object-position: center;
+    transform: rotateY(0deg);
+    animation: rotateF 8s linear infinite;
+    animation-delay: 0;
+    animation-direction: alternate;
+
+
+}
+
+
+@keyframes rotateL {
+
+    0%,
+    25%,
+    50%,
+    75% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateR {
+
+    0%,
+    25%,
+    50%,
+    100% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    75% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateB {
+
+    0%,
+    25%,
+    75%,
+    100% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateF {
+
+    0%,
+    50%,
+    75%,
+    100% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+
+    25% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
